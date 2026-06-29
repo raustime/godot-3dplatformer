@@ -1,0 +1,5 @@
+# Кеш імпорту та тимчасові файли Godot 4.x
+.godot/
+*.import
+export_presets.cfg
+.DS_Store
