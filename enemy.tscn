@@ -168,6 +168,14 @@ _data = {
 [sub_resource type="SphereShape3D" id="SphereShape3D_7xaro"]
 radius = 1.1530852
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7k104"]
+height = 0.66748047
+radius = 1.2724609
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4gyqm"]
+height = 0.66748047
+radius = 0.7480469
+
 [node name="Enemy" type="CharacterBody3D" unique_id=769378762]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 collision_layer = 8
@@ -206,3 +214,21 @@ autoplay = &"blob"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=435217806]
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.16706246, 0)
 shape = SubResource("SphereShape3D_7xaro")
+
+[node name="SideChecker" type="Area3D" parent="." unique_id=713287640]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SideChecker" unique_id=2073526029]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.1194605, 0)
+shape = SubResource("CylinderShape3D_7k104")
+
+[node name="TopChecker" type="Area3D" parent="." unique_id=1623930107]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.84756804, 0)
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TopChecker" unique_id=1333832536]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.16171604, 0)
+shape = SubResource("CylinderShape3D_4gyqm")
+
+[connection signal="body_entered" from="SideChecker" to="." method="_on_side_checker_body_entered"]
+[connection signal="body_entered" from="TopChecker" to="." method="_on_top_checker_body_entered"]

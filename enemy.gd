@@ -1,15 +1,15 @@
 extends CharacterBody3D
 
 
-const SPEED = 3.0
+var speed:float = 2.0
 
 @export var direction:=Vector3(-1,0,0)
 var is_turning:bool=false
 
 
 func _physics_process(delta: float) -> void:
-	velocity.x=SPEED*direction.x
-	velocity.z=SPEED*direction.z
+	velocity.x=speed*direction.x
+	velocity.z=speed*direction.z
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -32,3 +32,20 @@ func turn_around():
 
 	
 	
+
+
+func _on_side_checker_body_entered(_body: Node3D) -> void:
+	get_tree().change_scene_to_file("res://level_1.tscn")
+
+
+func _on_top_checker_body_entered(body: Node3D) -> void:
+	$AnimationPlayer.play("squash")
+	body.bounce()
+	disable_collission_checkers()
+	speed=0
+	await get_tree().create_timer(1.0).timeout
+	queue_free()
+	
+func disable_collission_checkers():
+	$SideChecker.set_collision_mask_value(1,false)
+	$TopChecker.set_collision_mask_value(1,false)
