@@ -4,6 +4,7 @@ extends CharacterBody3D
 var speed:float = 2.0
 
 @export var direction:=Vector3(-1,0,0)
+@export var turns_around_at_edges:bool=true
 var is_turning:bool=false
 
 
@@ -17,6 +18,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	if is_on_wall() and not is_turning:
+		turn_around()
+		
+	if not $RayCast3D.is_colliding() and is_on_floor() and not is_turning and turns_around_at_edges:
 		turn_around()
 		
 func turn_around():

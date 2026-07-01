@@ -87,22 +87,31 @@ transform = Transform3D(-4.3711307e-08, 0, -0.99999845, 0, 1, 0, 0.99999845, 0, 
 [node name="Enemies" type="Node3D" parent="." unique_id=1071449583]
 
 [node name="Enemy1" parent="Enemies" unique_id=769378762 instance=ExtResource("8_bjebc")]
-transform = Transform3D(-1.31134e-08, 0, -0.29999956, 0, 0.3, 0, 0.29999956, 0, -1.31134e-08, 9.469223, 0.74226964, 4.893791)
+transform = Transform3D(-1.3113397e-08, 0, -0.29999945, 0, 0.3, 0, 0.29999945, 0, -1.3113397e-08, 9.469, 0.5, 4.894)
 
 [node name="Enemy2" parent="Enemies" unique_id=1290411199 instance=ExtResource("8_bjebc")]
-transform = Transform3D(-1.3113393e-08, 0, 0.2999995, 0, 0.3, 0, -0.2999995, 0, -1.3113393e-08, 3.7106655, 0.74226964, 1.0501814)
+transform = Transform3D(-1.3113387e-08, 0, 0.2999993, 0, 0.3, 0, -0.2999993, 0, -1.3113387e-08, 3.1818004, 0.5, 1.0501806)
 direction = Vector3(1, 0, 0)
 
 [node name="Enemy3" parent="Enemies" unique_id=801656736 instance=ExtResource("8_bjebc")]
-transform = Transform3D(-0.2999994, 0, -2.6226779e-08, 0, 0.29999998, 0, 2.6226779e-08, 0, -0.2999994, 1.8003392, 0.74226964, -1.5325555)
+transform = Transform3D(-0.2999994, 0, -2.6226779e-08, 0, 0.29999998, 0, 2.6226779e-08, 0, -0.2999994, 1.8003392, 0.5, -1.5325555)
 direction = Vector3(0, 0, -1)
 
 [node name="Enemy4" parent="Enemies" unique_id=67696756 instance=ExtResource("8_bjebc")]
-transform = Transform3D(0.2999993, 0, 1.7763567e-15, 0, 0.29999998, 0, -1.7763567e-15, 0, 0.2999993, -1.6800903, 0.74226964, -5.150505)
+transform = Transform3D(0.2999993, 0, 1.7763567e-15, 0, 0.29999998, 0, -1.7763567e-15, 0, 0.2999993, -1.6800903, 0.5, -5.150505)
 direction = Vector3(0, 0, 1)
 
 [node name="Enemy5" parent="Enemies" unique_id=2141609306 instance=ExtResource("8_bjebc")]
-transform = Transform3D(0.2999992, 0, 1.7763564e-15, 0, 0.29999998, 0, -1.7763564e-15, 0, 0.2999992, -2.7390444, 0.74226964, 6.7625766)
+transform = Transform3D(0.2999992, 0, 1.7763564e-15, 0, 0.29999998, 0, -1.7763564e-15, 0, 0.2999992, -2.7390444, 0.5, 6.7625766)
 direction = Vector3(0, 0, 1)
+
+[node name="Enemy6" parent="Enemies" unique_id=55190847 instance=ExtResource("8_bjebc")]
+transform = Transform3D(0.29999903, 0, 1.7763558e-15, 0, 0.29999998, 0, -1.7763558e-15, 0, 0.29999903, -14.866117, 2.3688626, 8.830614)
+direction = Vector3(0, 0, 1)
+
+[node name="Enemy7" parent="Enemies" unique_id=1140342118 instance=ExtResource("8_bjebc")]
+transform = Transform3D(0.29999906, 0, 1.7763559e-15, 0, 0.29999998, 0, -1.7763559e-15, 0, 0.29999906, 1.1253434, 1.2858725, 3.0641975)
+direction = Vector3(0, 0, 1)
+turns_around_at_edges = false
 
 [connection signal="body_entered" from="FallZone" to="Steve" method="_on_fall_zone_body_entered"]
