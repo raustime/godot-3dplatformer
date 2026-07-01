@@ -39,7 +39,7 @@ func turn_around():
 
 
 func _on_side_checker_body_entered(_body: Node3D) -> void:
-	get_tree().change_scene_to_file("res://level_1.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://level_1.tscn")
 
 
 func _on_top_checker_body_entered(body: Node3D) -> void:
