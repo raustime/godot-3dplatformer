@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://ckfvq01ehuiyu"]
+
+[ext_resource type="Script" uid="uid://n87bfx3myi4j" path="res://game_over.gd" id="1_8u835"]
+[ext_resource type="FontFile" uid="uid://2nue1srj15sw" path="res://Assets/Fonts/LuckiestGuy-Regular.ttf" id="2_ftari"]
+[ext_resource type="Texture2D" uid="uid://cvncya6ocb2x8" path="res://Assets/Images/image-screen-gameover.png" id="3_8u835"]
+[ext_resource type="FontFile" uid="uid://dxen2perm4wp1" path="res://Assets/Fonts/FrancoisOne-Regular.ttf" id="4_k2vha"]
+
+[node name="WinTitle" type="Control" unique_id=739409594]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8u835")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1918868500]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.27442315, 0.13034534, 0.15485615, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1196495787]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 20.0
+offset_bottom = 111.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.4176953, 0.0008088854, 0.4080831, 1)
+theme_override_colors/font_shadow_color = Color(0.6096143, 0.5576542, 0.05874095, 1)
+theme_override_colors/font_outline_color = Color(0.44313726, 0.84313726, 0.49411765, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 11
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_ftari")
+theme_override_font_sizes/font_size = 90
+text = "game over"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1030356355]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -476.0
+offset_top = -324.0
+offset_right = -476.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_8u835")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="ButtonMenu" type="Button" parent="." unique_id=266919205]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -202.0
+offset_top = -123.0
+offset_right = 202.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.5191206, 0.5541814, 0.15551239, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0.81960785, 1)
+theme_override_colors/font_hover_color = Color(0.5160555, 0.9342872, 0.490983, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("4_k2vha")
+theme_override_font_sizes/font_size = 80
+action_mode = 0
+text = "MAIN MENU"
+flat = true
+
+[connection signal="pressed" from="ButtonMenu" to="." method="_on_button_menu_pressed"]
+[connection signal="pressed" from="ButtonMenu" to="." method="_on_button_pressed"]

@@ -20,4 +20,4 @@ func _on_coin_collected() -> void:
 	
 	if Global.coins>=Global.COINS_TO_WIN:
 		await get_tree().create_timer(2.0).timeout
-		get_tree().change_scene_to_file("res://level_1.tscn")
+		get_tree().change_scene_to_file("res://game_win.tscn")
