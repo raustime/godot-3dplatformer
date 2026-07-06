@@ -29,6 +29,7 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		$JumpSound.play()
 		velocity.y = JUMP_VELOCITY
 
 
@@ -66,6 +67,7 @@ func align_with_floor(floor_normal):
 
 
 func _on_fall_zone_body_entered(_body: Node3D) -> void:
+	SoundManager.play_fall_sound()
 	get_tree().call_deferred("change_scene_to_file", "res://game_over.tscn")
 
 func bounce():

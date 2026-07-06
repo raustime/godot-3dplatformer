@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://40enub4xtanp"
+SoundManager="*uid://wfgaps27sg6s"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [input]
 
