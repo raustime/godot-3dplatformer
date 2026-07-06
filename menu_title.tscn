@@ -15,19 +15,24 @@ grow_vertical = 2
 script = ExtResource("1_weaej")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1918868500]
-layout_mode = 0
-offset_left = -10.0
-offset_top = -11.0
-offset_right = 1168.0
-offset_bottom = 659.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.21176471, 0.10980392, 0.34117648, 1)
 
 [node name="Label" type="Label" parent="." unique_id=1196495787]
-layout_mode = 0
-offset_left = 155.99998
-offset_top = 70.00001
-offset_right = 1061.0
-offset_bottom = 161.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -452.5
+offset_top = 80.0
+offset_right = 452.5
+offset_bottom = 171.0
+grow_horizontal = 2
 rotation = -0.057670377
 theme_override_colors/font_color = Color(0.90307313, 0.025592275, 0.88205874, 1)
 theme_override_colors/font_shadow_color = Color(0.6096143, 0.5576542, 0.05874095, 1)

@@ -13,6 +13,9 @@ config_version=5
 config/name="3d platformer"
 run/main_scene="uid://c7jvopcvev3x8"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/bg_color=Color(0.10810652, 0.010511711, 0.12239126, 1)
+boot_splash/show_image=false
+boot_splash/image="uid://dkryiqriehqf7"
 config/icon="res://icon.svg"
 
 [autoload]
@@ -22,6 +25,10 @@ SoundManager="*uid://wfgaps27sg6s"
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/mode=3
+window/size/borderless=true
 window/stretch/mode="canvas_items"
 
 [input]
